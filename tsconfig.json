@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "allowJs": false,
+    "sourceMap": false,
+    "outDir": "./dist/src",
+    "strict": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "types": [
+      "jquery",
+      "@league-of-foundry-developers/foundry-vtt-types",
+      "./src/@types"
+    ],
+    "newLine": "lf",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
