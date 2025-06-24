@@ -3,8 +3,9 @@
   "title": "iscjavier PF2e module",
   "version": "0.0.1",
   "description": "module for PF2e",
-  "main": "src/main.ts",
+  "main": "main.js",
   "scripts": {
+    "web": "webpack",
     "build": "npx gulp",
     "devbuild": "npx gulp devbuild",
     "compress": "npx gulp compress",
@@ -26,7 +27,7 @@
     ]
   },
   "devDependencies": {
-    "@league-of-foundry-developers/foundry-vtt-types": "^9.280.0",
+    "@league-of-foundry-developers/foundry-vtt-types": "^9.280.1",
     "@types/jquery": "^3.5.30",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -38,6 +39,10 @@
     "gulp-zip": "^5.0.2",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
-    "typescript": "^5.5.4"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-stream": "^7.0.0"
   }
 }
