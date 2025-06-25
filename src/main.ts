@@ -12,8 +12,9 @@ Hooks.on('pf2e.damageRoll', (damageRoll: DamageRoll) => {
   }
 });
 
-Hooks.on('pf2e.fudgeDamageRoll', (damageRoll: DamageRoll) => {
+Hooks.on('pf2e.fudgeDamageRoll', async (damageRoll: DamageRoll, resolve: (fudgedRoll: DamageRoll) => void) => {
   if (rollInspector.isCritFromPlayer(damageRoll)) {
     hardCrit(damageRoll);
   }
+  resolve(damageRoll);
 });

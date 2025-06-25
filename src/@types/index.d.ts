@@ -35,6 +35,8 @@ type DamageRoll = {
     }>;
   }>;
   _total: number;
+  clone: () => DamageRoll;
+  reroll: () => Primise<DamageRoll>;
 };
 
 type RollTermResult = {
@@ -56,6 +58,7 @@ type Character = {
   inventory: {
     contents: Array<Item>;
   };
+  updateEmbeddedDocuments: (key: string, newValues: Array<{ _id: strring; [props: string]: unknown }>) => Promise<void>;
 };
 
 type Item = {
@@ -66,12 +69,8 @@ type Item = {
   };
   handsHeld: 0 | 1 | 2;
   system: {
-    property1: {
-      damageType: string;
-      dice: number | null; // number of dice
-      die: string; // d<faces>
-      value: string;
-    };
+    rules: Array<{ label: string }>;
   };
   update: (options: { [key: string]: object }) => void;
+  _id: string;
 };

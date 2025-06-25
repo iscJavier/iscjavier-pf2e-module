@@ -1,6 +1,8 @@
 // // custom hook on class DamagePF2e
 // if (roll === null) return null;
-// Hooks.callAll('pf2e.fudgeDamageRoll', roll);
+// const { promise, resolve } = Promise.withResolvers();
+// Hooks.callAll('pf2e.fudgeDamageRoll', roll, resolve);
+// roll = await promise;
 
 // // CharacterPF2e#prepareStrike
 // const weaponPotency = (() => {
